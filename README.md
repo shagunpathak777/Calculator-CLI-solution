@@ -1,53 +1,23 @@
-# Calculator-CLI-solution
- creates a simple menu ✔ Easy to type ✔ Easy to understand ✔ Makes code cleaner ✔ Allows exit option
- def add(a, b):
-    return a + b
+Task Title: Calculator CLI App
+Objective:
+Create a command-line calculator that performs basic arithmetic operations using Python.
 
-def subtract(a, b):
-    return a - b
+Tools Used:
+Python, VS Code
 
-def multiply(a, b):
-    return a * b
+Description:
+I built a simple command-line calculator in Python.
+The program uses separate functions for each operation (addition, subtraction, multiplication, and division). It takes user input using input(), performs the selected operation, and runs continuously inside a while loop until the user chooses the exit option.
 
-def divide(a, b):
-    if b == 0:
-        return "Error! Division by zero."
-    return a / b
+The calculator displays a menu with choices from 1 to 5:
+1 → Addition
+2 → Subtraction
+3 → Multiplication
+4 → Division
+5 → Exit
 
-# Main program loop
-while True:
-    print("\n===== SIMPLE CALCULATOR =====")
-    print("1. Addition (+)")
-    print("2. Subtraction (-)")
-    print("3. Multiplication (*)")
-    print("4. Division (/)")
-    print("5. Exit")
+The program also includes handling for division by zero.
+The output is shown after every operation, and the loop continues until the user selects option 5.
 
-    choice = input("Enter your choice (1-5): ")
-
-    if choice == '5':
-        print("Exiting the calculator. Goodbye!")
-        break
-
-    if choice not in ('1', '2', '3', '4'):
-        print("Invalid choice! Please choose again.")
-        continue
-
-    # Taking user input for numbers
-    num1 = float(input("Enter first number: "))
-    num2 = float(input("Enter second number: "))
-
-    # Performing operation
-    if choice == '1':
-        print("Result:", add(num1, num2))
-
-    elif choice == '2':
-        print("Result:", subtract(num1, num2))
-
-    elif choice == '3':
-        print("Result:", multiply(num1, num2))
-
-    elif choice == '4':
-        print("Result:", divide(num1, num2))
-    else:
-        print("Unexpected error!")   
+Deliverable:
+A Python script named calculator.py.
