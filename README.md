@@ -1,2 +1,53 @@
 # Calculator-CLI-solution
  creates a simple menu ✔ Easy to type ✔ Easy to understand ✔ Makes code cleaner ✔ Allows exit option
+ def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        return "Error! Division by zero."
+    return a / b
+
+# Main program loop
+while True:
+    print("\n===== SIMPLE CALCULATOR =====")
+    print("1. Addition (+)")
+    print("2. Subtraction (-)")
+    print("3. Multiplication (*)")
+    print("4. Division (/)")
+    print("5. Exit")
+
+    choice = input("Enter your choice (1-5): ")
+
+    if choice == '5':
+        print("Exiting the calculator. Goodbye!")
+        break
+
+    if choice not in ('1', '2', '3', '4'):
+        print("Invalid choice! Please choose again.")
+        continue
+
+    # Taking user input for numbers
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+
+    # Performing operation
+    if choice == '1':
+        print("Result:", add(num1, num2))
+
+    elif choice == '2':
+        print("Result:", subtract(num1, num2))
+
+    elif choice == '3':
+        print("Result:", multiply(num1, num2))
+
+    elif choice == '4':
+        print("Result:", divide(num1, num2))
+    else:
+        print("Unexpected error!")   
